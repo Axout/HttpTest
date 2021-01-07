@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">HttpTest</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="link2">"http://80.249.150.18:3000/"</string>
-    <string name="link">https://yandex.ru/</string>
+    <string name="link">http://80.249.150.18:3000/</string>
 </resources>

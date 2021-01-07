@@ -13,6 +13,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
@@ -70,10 +71,11 @@ public class MainActivity extends AppCompatActivity {
     private String getContent(String path) throws IOException {
         BufferedReader reader = null;
         InputStream stream = null;
-        HttpsURLConnection connection = null;
+//        HttpsURLConnection connection = null;
+        HttpURLConnection connection = null;
         try {
             URL url = new URL(path);
-            connection = (HttpsURLConnection)url.openConnection();
+            connection = (HttpURLConnection)url.openConnection();
             connection.setRequestMethod("GET"); // установка метода получения данных -GET
             connection.setReadTimeout(10000); // установка таймаута перед выполнением - 10 000 миллисекунд
             connection.connect(); // подключаемся к ресурсу
